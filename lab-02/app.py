@@ -12,6 +12,9 @@ def home():
 @app.route("/caesar")
 def ceasar():
     return render_template('caesar.html')
+@app.route("/vigenere")
+def vigebere():
+    return render_template('vigenere.html')
 
 @app.route("/encrypt", methods=['POST'])
 def caesar_encrypt():
@@ -31,4 +34,5 @@ def caesar_decrypt():
 
 #main function
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port = 5050, debug = True)
+    # app.run(host="0.0.0.0", port = 5050, debug = True)
+     app.run(host="127.0.0.1", port=5000, debug=True)
