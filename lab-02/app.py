@@ -15,7 +15,6 @@ def ceasar():
 @app.route("/vigenere")
 def vigebere():
     return render_template('vigenere.html')
-
 @app.route("/encrypt", methods=['POST'])
 def caesar_encrypt():
     text = request.form['InputPlainText']
@@ -33,6 +32,5 @@ def caesar_decrypt():
     return f"text: {text} <br/> Key: {key} <br/> decrypted text: {decrypted_text}"
 
 #main function
-if __name__ == "__main__":
-    # app.run(host="0.0.0.0", port = 5050, debug = True)
+if __name__ == "__main__":    # app.run(host="0.0.0.0", port = 5050, debug = True)
      app.run(host="127.0.0.1", port=5000, debug=True)
